@@ -6,6 +6,7 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
+
 /// 1
         int variable_1 = 1;
         while (variable_1 <= 500) {
@@ -21,7 +22,18 @@ public class Main {
 /// 3
         int a = 5; int b = 3; int c = -2;
         System.out.println(Arrays.toString(quadratic(a, b, c)));
+
+/// 4
+        int Sum = 100;
+        System.out.println(summary(Sum));
+
+
+///5
+        String word = "polop";
+        System.out.println(Palindrome(word));
     }
+
+
 
 /// 1
     public static String iterating(int i) {
@@ -69,6 +81,32 @@ public class Main {
         }
 
         return roots;
+    }
+
+    ///4
+    public static double summary(double min){
+        int n = 2;
+        double part = 1/(Math.pow(n,2)+n-2);
+        double summ=0;
+        if (min <= 0) min = 1;
+        if (min > 0 && min < 1e-15) min = 1e-15;
+
+        while (part > min){
+            part = 1/(Math.pow(n,2)+n-2);
+            summ += part;
+            n++;
+        }
+        return summ;
+    }
+
+/// 5
+    public static boolean Palindrome(String str){
+        int length = str.length();
+        if (length < 2) return true;
+        for(int i=0; i<length/2; i++){
+            if(str.charAt(i) != str.charAt(length-i-1)) return false;
+        }
+        return true;
     }
 }
 
