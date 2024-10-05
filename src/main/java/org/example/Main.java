@@ -8,6 +8,7 @@ public class Main {
     public static void main(String[] args) {
 
 /// 1
+        System.out.println("First function: ");
         int variable_1 = 1;
         while (variable_1 <= 500) {
             System.out.println(iterating(variable_1));
@@ -15,21 +16,26 @@ public class Main {
         }
 
 /// 2
+        System.out.println("\nSecond function: ");
         String not_reverse_word = "make install";
         int lenght = not_reverse_word.length();
         System.out.println(reverse(not_reverse_word, lenght));
 
 /// 3
-        int a = 5; int b = 3; int c = -2;
+        System.out.println("\nThird function: ");
+        int a = 5; int b = 3; int c = -26;
         System.out.println(Arrays.toString(quadratic(a, b, c)));
 
 /// 4
-        int Sum = 100;
+        System.out.println("\nFourth function: ");
+        double Sum = 0.000001;
         System.out.println(summary(Sum));
 
 
 ///5
+        System.out.println("\nFifth function: ");
         String word = "polop";
+        System.out.print("Word is palindrome - ");
         System.out.println(Palindrome(word));
     }
 
